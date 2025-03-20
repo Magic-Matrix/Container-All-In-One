@@ -2,6 +2,7 @@
 ### 部署
 
 ```shell
+git clone https://github.com/Magic-Matrix/Container-All-In-One.git
 
 touch .env/user.env
 
@@ -46,7 +47,7 @@ touch .env/user.env
 
 - [x] webdav
 - [x] memos
-- [x] gitea
+- [ ] gitea
 - [x] it_tools
 - [ ] halo2
 - [ ] jellyfin
