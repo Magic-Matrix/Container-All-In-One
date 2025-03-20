@@ -1,0 +1,11 @@
+services:
+  nginx:   
+    image: nginx
+    container_name: nginx
+    restart: always
+    volumes:
+      - ./conf/:/etc/nginx/              #映射配置文件入口文件
+      - ./html:/usr/share/nginx/html                         #静态资源根目录挂载
+      - ./logs:/var/log/nginx                                #日志文件挂载
+    ports:
+      - 8888:80    #宿主主机端口80 映射到 容器端口80
