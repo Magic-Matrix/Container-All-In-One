@@ -1,0 +1,8 @@
+services:
+  frps:
+    image: ${FRPS_IMAGE}
+    container_name: frps
+    restart: always
+    network_mode: host
+    volumes:
+      - ./configs/frps.toml:/etc/frp/frps.toml
