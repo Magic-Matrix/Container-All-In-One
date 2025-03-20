@@ -1,0 +1,10 @@
+services:
+  jellyfin1:
+    container_name: jellyfin
+    image: ${JELLYFIN_IMAGE}
+    restart: always
+    network_mode: host
+    volumes:
+      - ./cache:/cache
+      - ./config:/config
+      - ./media:/media
