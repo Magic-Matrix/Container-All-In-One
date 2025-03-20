@@ -1,0 +1,8 @@
+services:
+  memos:
+    container_name: memos
+    image: ${MEMOS_IMAGE}
+    ports:
+      - ${MEMOS_PORT}:5230
+    volumes:
+      - ./:/var/opt/memos

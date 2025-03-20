@@ -1,0 +1,7 @@
+services:
+  it_tools:
+    container_name: it-tools
+    image: ${IT_TOOLS_IMAGE}
+    restart: unless-stopped
+    ports:
+      - ${IT_TOOLS_PORT}:80

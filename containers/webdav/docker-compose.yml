@@ -4,10 +4,10 @@ services:
     image: ${WEBDAV_IMAGE}
     restart: always
     ports:
-      - "9000:80"
+      - ${WEBDAV_PORT}:80
     environment:
       - AUTH_TYPE=Digest
       - USERNAME=${USER_NAME}
-      - PASSWORD=${PASSWORD}
+      - PASSWORD=${USER_PASS}
     volumes:
-      - ./data:/var/lib/dav/data
+      - ./datas:/var/lib/dav/data
