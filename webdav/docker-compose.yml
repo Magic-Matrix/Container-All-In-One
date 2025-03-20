@@ -1,0 +1,13 @@
+services:
+  webdav:
+    container_name: webdav
+    image: ${WEBDAV_IMAGE}
+    restart: always
+    ports:
+      - "9000:80"
+    environment:
+      - AUTH_TYPE=Digest
+      - USERNAME=${USER_NAME}
+      - PASSWORD=${PASSWORD}
+    volumes:
+      - ./data:/var/lib/dav/data
