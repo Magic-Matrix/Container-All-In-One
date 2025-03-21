@@ -1,17 +1,18 @@
-networks:
-  gitea:
-    external: false
-
 services:
-  server:
+  gitea:
     image: ${GITEA_IMAGE}
     container_name: gitea
     environment:
       - USER_UID=1000
       - USER_GID=1000
+      # - GITEA__database__DB_TYPE=mysql
+      # - GITEA__database__HOST=db:3306
+      # - GITEA__database__NAME=gitea
+      # - GITEA__database__USER=root
+      # - GITEA__database__PASSWD=${ADMIN_PASS}
     restart: always
-    networks:
-      - gitea
+    # networks:
+    #   - app_networks
     volumes:
       - ./gitea:/data
       - /etc/timezone:/etc/timezone:ro
@@ -19,3 +20,8 @@ services:
     ports:
       - "${GITEA_PORT}:3000"
       - "${GITEA_SSH_PORT}:22"
+
+
+# networks:
+#   app_networks:
+#     external: true

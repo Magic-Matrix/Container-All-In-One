@@ -47,7 +47,7 @@ touch .env/user.env
 
 - [x] webdav
 - [x] memos
-- [ ] gitea
+- [x] gitea
 - [x] it_tools
 - [ ] halo2
 - [ ] jellyfin
